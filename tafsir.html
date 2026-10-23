@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{if(localStorage.getItem("mh_theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+<title>التفسير | مجمع مشعل الحميدي</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tafsir" data-protected="true">
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="home.html"><span class="logo"><b>م</b></span>مجمع مشعل الحميدي</a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="القائمة"><span></span><span></span><span></span></button>
+  <nav id="mainNav">
+    <a href="home.html">الرئيسية</a>
+    <a href="mushaf.html">المصحف</a>
+    <a href="tafsir.html" class="active">التفسير</a>
+    <a href="adhkar.html">الأذكار</a>
+    <a href="seerah.html">السيرة</a>
+    <a href="sahaba.html">الصحابة</a>
+    <a href="progress.html">مراجعة التقدم</a>
+    <a href="contact.html">تواصل معنا</a>
+    <button class="theme-btn" id="themeBtn" type="button">الوضع الليلي</button>
+    <a href="index.html" class="logout" id="logout">تسجيل الخروج</a>
+  </nav>
+</div></header>
+
+<div class="hero scene mini"><div class="wrap">
+  <h1>تفسير القرآن الكريم</h1>
+  <p>اختر السورة من الفهرس ثم اقرأ تفسير كل آية، ويمكنك تغيير كتاب التفسير.</p>
+</div></div>
+
+<section><div class="wrap">
+  <div class="card tools"><div><label for="book">كتاب التفسير</label><select id="book"></select></div></div>
+  <div class="lib">
+    <aside class="toc card">
+      <h3>الفهرس</h3>
+      <label for="q">ابحث عن سورة</label>
+      <input id="q" type="search" autocomplete="off">
+      <ul id="toc" class="toc-list"></ul>
+    </aside>
+    <article class="reader card">
+      <h2 class="sec-title" id="rTitle">…</h2>
+      <div id="rBody">جارٍ التحميل…</div>
+      <p class="m-info" style="margin-top:18px">التفسير يُجلب من الإنترنت أول مرة ثم يُحفظ في المتصفح. مصدر البيانات: مشروع tafsir_api المفتوح.</p>
+    </article>
+  </div>
+</div></section>
+
+<footer>© <span id="year"></span> مجمع مشعل الحميدي. جميع الحقوق محفوظة.</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

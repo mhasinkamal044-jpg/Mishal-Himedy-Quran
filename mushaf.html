@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{if(localStorage.getItem("mh_theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+<title>المصحف الشريف | مجمع مشعل الحميدي</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="mushaf" data-protected="true">
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="home.html"><span class="logo"><b>م</b></span>مجمع مشعل الحميدي</a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="القائمة"><span></span><span></span><span></span></button>
+  <nav id="mainNav">
+    <a href="home.html">الرئيسية</a>
+    <a href="mushaf.html" class="active">المصحف</a>
+    <a href="tafsir.html">التفسير</a>
+    <a href="adhkar.html">الأذكار</a>
+    <a href="seerah.html">السيرة</a>
+    <a href="sahaba.html">الصحابة</a>
+    <a href="progress.html">مراجعة التقدم</a>
+    <a href="contact.html">تواصل معنا</a>
+    <button class="theme-btn" id="themeBtn" type="button">الوضع الليلي</button>
+    <a href="index.html" class="logout" id="logout">تسجيل الخروج</a>
+  </nav>
+</div></header>
+
+<div class="hero scene mini"><div class="wrap">
+  <h1>المصحف الشريف</h1>
+  <p>اقرأ القرآن الكريم سورةً سورة، وضع علامة عند آخر موضع وصلت إليه لتكمل منه لاحقاً.</p>
+</div></div>
+
+<section><div class="wrap">
+  <div class="card tools">
+    <div><label for="surah">السورة</label><select id="surah"></select></div>
+    <div><label for="jump">اذهب إلى الآية</label><input id="jump" type="number" min="1" placeholder="رقم الآية"></div>
+    <button class="btn dark" id="prev" type="button">السابقة</button>
+    <button class="btn dark" id="next" type="button">التالية</button>
+    <button class="btn dark" id="smaller" type="button" aria-label="تصغير الخط">أ−</button>
+    <button class="btn dark" id="bigger" type="button" aria-label="تكبير الخط">أ+</button>
+    <button class="btn" id="resume" type="button">متابعة من العلامة</button>
+  </div>
+
+  <div class="card player">
+    <div class="p-row">
+      <button class="btn" id="play" type="button">تشغيل التلاوة</button>
+      <button class="btn dark" id="pprev" type="button">الآية السابقة</button>
+      <button class="btn dark" id="pnext" type="button">الآية التالية</button>
+    </div>
+    <div class="row3">
+      <div><label for="rec">القارئ</label>
+        <select id="rec">
+          <option value="mp3q:faqih">محمد الفقيه (السورة كاملة)</option>
+          <option value="ar.mahermuaiqly">ماهر المعيقلي</option>
+          <option value="ar.alafasy">مشاري العفاسي</option>
+          <option value="ar.husary">محمود الحصري</option>
+          <option value="ar.minshawi">محمد المنشاوي</option>
+          <option value="ar.sudais">عبدالرحمن السديس</option>
+          <option value="ar.shuraim">سعود الشريم</option>
+          <option value="ar.abdulbasit">عبد الباسط عبد الصمد</option>
+          <option value="ar.hudhaify">علي الحذيفي</option>
+          <option value="ar.ajamy">أحمد العجمي</option>
+        </select></div>
+      <div><label for="repeat">تكرار كل آية</label>
+        <select id="repeat"><option value="1">مرة واحدة</option><option value="2">مرتان</option><option value="3">3 مرات</option><option value="5">5 مرات</option><option value="10">10 مرات</option></select></div>
+      <div><label for="speed">السرعة</label>
+        <select id="speed"><option value="0.75">بطيئة</option><option value="1" selected>عادية</option><option value="1.25">سريعة</option><option value="1.5">أسرع</option></select></div>
+    </div>
+    <p class="m-info" id="note" style="margin-top:10px"></p>
+  </div>
+
+  <article class="mushaf">
+    <div class="m-head"><h2 id="title">…</h2><p class="m-info" id="meta"></p></div>
+    <div class="bism" id="bism" hidden>بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
+    <div class="ayahs" id="ayahs" lang="ar">جارٍ التحميل…</div>
+    <p class="m-info" id="status">اضغط على أي آية لوضع علامة عندها.</p>
+  </article>
+</div></section>
+
+<footer>© <span id="year"></span> مجمع مشعل الحميدي. جميع الحقوق محفوظة.</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
